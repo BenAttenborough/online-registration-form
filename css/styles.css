@@ -6,7 +6,7 @@
 
 /*---TYPOGRAPHY---*/
 
-h1, h2, h3, h4, p, a, label, button, .required {
+h1, h2, h3, h4, p, a, label, button, select, textarea, .placeholder {
 	font-family: 'Merriweather', serif;
 }
 
@@ -31,10 +31,13 @@ header {
 .main-container {
 	width: 95%;
 	margin: 0 auto;
+	background-color: #fff;
+	padding: 0 2.5%;
 }
 
 .title-container {
 	text-align: center;
+	margin: 3em 0;
 }
 
 /*---ELEMENTS---*/
@@ -58,11 +61,13 @@ label {
 
 fieldset {
 	border: none;
+	margin-top: 3em;
 }
 
 input[type="text"],
 input[type=tel],
 input[type=email],
+input[type=url],
 select,
 textarea,
 button {
@@ -74,6 +79,21 @@ button {
 	background-color: #eff0f1;
 	border: none;
 	border-radius: 5px;
+	transition: background-color 1s;
+}
+
+textarea {
+	padding-top: 0.5em;
+}
+
+#zip {
+	max-width: 10em;
+}
+
+input[type=file] {
+	margin: .5em 0 1.5em 0;
+	font-family: 'Merriweather', serif;
+	color: gray;
 }
 
 textarea {
@@ -88,25 +108,35 @@ button {
 input[type="text"]:focus,
 input[type=tel]:focus,
 input[type=email]:focus,
-select {
+input[type=url]:focus,
+select:focus {
 	outline-color: #46698b;
+	background-color: #fffb8c
 }
 
-.required {
+input:focus:invalid {
+	background-color: #ffc3c3;
+}
+
+input:required:valid {
+	background-color: #aeffac;
+}
+
+.placeholder {
 	font-style: italic;
 }
 
 /*Aligning placeholder text for as many browsers as possible*/
-.required::-webkit-input-placeholder {
+.placeholder::-webkit-input-placeholder {
 	text-align: right;
 }
-.required:-moz-placeholder {
+.placeholder:-moz-placeholder {
 	text-align: right;
 }
-.required::-moz-placeholder {
+.placeholder::-moz-placeholder {
 	text-align: right;
 }
-.required:-ms-input-placeholder {
+.placeholder:-ms-input-placeholder {
 	text-align: right;
 }
 
@@ -115,7 +145,23 @@ input[type="checkbox"] {
 	margin-bottom: 1em;
 }
 
+/* ===MEDIA DESKTOP=== */
 
+@media (min-width: 600px) {
+
+	body {
+		background-image: url("../img/gplaypattern.png");
+		background-repeat: repeat;
+	}
+
+	.main-container {
+		width: 90%;
+		max-width: 800px;
+		background-color: #fff;
+		padding: 2.5%;
+	}
+
+}
 
 
 

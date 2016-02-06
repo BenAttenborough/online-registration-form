@@ -20,10 +20,11 @@
       <main>
         <div class="title-container">
           <h2>Signup for our newsletter</h2>
-          <p>Get the latest news on how your code is doing right in your inbox</p>
-          <hr class="thick-rule">
-          <hr>
+          <p>Get the latest news on how your code is doing right in your inbox</p>  
         </div>
+
+        <hr class="thick-rule">
+        <hr>
 
         <div class="form-container">
           <form action="index.html" method="post">
@@ -31,13 +32,14 @@
             <fieldset>
 
               <legend><h2>Contact Information</h2></legend>
+              <br>
        
               <label for="name">Full Name</label>
-              <input type="text" class="required" id="name" name="user_name" placeholder="Required">
+              <input type="text" class="placeholder" id="name" name="user_name" placeholder="Required" required>
               <br>
 
               <label for="email">Email Address</label>
-              <input type="email" class="required" id="email" name="user_email" placeholder="Required">
+              <input type="email" class="placeholder" id="email" name="user_email" placeholder="Required" required>
               <br>
 
               <label for="phone">Phone Number</label>
@@ -80,6 +82,14 @@
               <input type="text" id="zip" name="user_zip">
               <br>
 
+              <label for="url">Your Website</label>
+              <input type="url" class="placeholder" id="url" name="user_url" placeholder="github repo or personal webpage">
+              <br>
+
+              <label for="avatar">Upload picture of yourself</label>
+              <input type="file" class="file-upload" id="avatar" name="user_avatar">
+              <br>
+
             </fieldset>
 
             <hr>
@@ -87,6 +97,7 @@
             <fieldset>
 
               <legend><h2>Newsletter</h2></legend>
+              <br>
 
               <label>Select the newsletters you would like to recieve</label>
               <br>
