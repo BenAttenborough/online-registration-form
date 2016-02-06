@@ -6,12 +6,17 @@
 
 /*---TYPOGRAPHY---*/
 
-h1, h2, h3, h4, p, a, label {
+h1, h2, h3, h4, p, a, label, button, .required {
 	font-family: 'Merriweather', serif;
 }
 
 p, label {
 	color: gray;
+}
+
+footer p {
+	text-align: center;
+	font-style: italic;
 }
 
 /*---LAYOUT---*/
@@ -34,15 +39,84 @@ header {
 
 /*---ELEMENTS---*/
 
+hr {
+	border-style: solid;
+}
+
+.thick-rule {
+	border-width: 3px;
+}
+
 label {
 	display: block;
 }
 
-input {
-	background-color: #eff0f1;
+.inline-label {
+	display: inline;
+	margin-left: 0.5em;
+}
+
+fieldset {
 	border: none;
-	border-radius: 5px;
+}
+
+input[type="text"],
+input[type=tel],
+input[type=email],
+select,
+textarea,
+button {
 	width: 100%;
 	height: 3em;
 	margin: .5em 0 1.5em 0;
+	padding-left: 1em;
+	padding-right: 1em;
+	background-color: #eff0f1;
+	border: none;
+	border-radius: 5px;
 }
+
+textarea {
+	height: 8em;
+}
+
+button {
+	color: #fff;
+	background-color: #4ebbb5;
+}
+
+input[type="text"]:focus,
+input[type=tel]:focus,
+input[type=email]:focus,
+select {
+	outline-color: #46698b;
+}
+
+.required {
+	font-style: italic;
+}
+
+/*Aligning placeholder text for as many browsers as possible*/
+.required::-webkit-input-placeholder {
+	text-align: right;
+}
+.required:-moz-placeholder {
+	text-align: right;
+}
+.required::-moz-placeholder {
+	text-align: right;
+}
+.required:-ms-input-placeholder {
+	text-align: right;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	margin-bottom: 1em;
+}
+
+
+
+
+
+
