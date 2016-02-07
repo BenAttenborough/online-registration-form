@@ -1,10 +1,43 @@
-/*---GENERAL---*/
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:	Online Registration Form
+Version:	1.0
+Author: 	@WebDesignerBen
+URI:		https://github.com/BenAttenborough/online-registration-form
+
+--------------------------------------------------------------------
+
+[Table of Contents]
+
+---GENERAL---
+---TYPOGRAPHY---
+---LAYOUT---
+---ELEMENTS---
+---FORM---
+	---INPUT FIELDS---
+	---INPUT FOCUS---
+	---INPUT PLACEHOLDERS---
+---MEDIA QUERIES---
+	---TABLET AND ABOVE---
+
+Note: Project employs mobile-first philosophy, main styles are for
+mobile then views are progressively enchanced for tablet and 
+desktop
+
+-------------------------------------------------------------------*/
+
+/*
+ *---GENERAL---
+ */
 
 * {
 	box-sizing: border-box;
 }
 
-/*---TYPOGRAPHY---*/
+/*
+ *---TYPOGRAPHY---
+ */
 
 h1, h2, h3, h4, p, a, label, button, select, textarea, input, .placeholder {
 	font-family: 'Merriweather', serif;
@@ -19,7 +52,9 @@ footer p {
 	font-style: italic;
 }
 
-/*---LAYOUT---*/
+/*
+ *---LAYOUT---
+ */
 
 header {
 	padding: 1em 0;
@@ -40,7 +75,9 @@ header {
 	margin: 3em 0;
 }
 
-/*---ELEMENTS---*/
+/*
+ *---ELEMENTS---
+ */
 
 hr {
 	border-style: solid;
@@ -50,13 +87,17 @@ hr {
 	border-width: 3px;
 }
 
-label {
-	display: block;
+/*
+ *---FORM---
+ */
+
+fieldset {
+	border: none;
+	margin-top: 3em;
 }
 
-.newsletter label {
-	margin-top: 1em;
-	margin-bottom: 0.5em;
+label {
+	display: block;
 }
 
 .inline-label {
@@ -64,10 +105,12 @@ label {
 	margin-left: 0.5em;
 }
 
-fieldset {
-	border: none;
-	margin-top: 3em;
+.newsletter label {
+	margin-top: 1em;
+	margin-bottom: 0.5em;
 }
+
+/*---INPUT FIELDS---*/
 
 input[type="text"],
 input[type=tel],
@@ -87,14 +130,6 @@ button {
 	transition: background-color 1s;
 }
 
-textarea {
-	padding-top: 0.5em;
-}
-
-#zip {
-	max-width: 10em;
-}
-
 input[type=file] {
 	margin: .5em 0 1.5em 0;
 	font-family: 'Merriweather', serif;
@@ -102,13 +137,26 @@ input[type=file] {
 }
 
 textarea {
+	padding-top: 0.5em;
 	height: 8em;
+}
+
+#zip {
+	max-width: 10em;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	margin-top: 0;
+	margin-bottom: 1em;
 }
 
 button {
 	color: #fff;
 	background-color: #4ebbb5;
 }
+
+/*---INPUT FOCUS---*/
 
 input[type="text"]:focus,
 input[type=tel]:focus,
@@ -129,6 +177,8 @@ input[type=url]:focus:valid {
 	background-color: #aeffac;
 }
 
+/*---INPUT PLACEHOLDERS---*/
+
 /*Aligning placeholder text for as many browsers as possible*/
 .placeholder::-webkit-input-placeholder {
 	text-align: right;
@@ -147,13 +197,11 @@ input[type=url]:focus:valid {
 	font-style: italic;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
-	margin-top: 0;
-	margin-bottom: 1em;
-}
+/*
+ *---MEDIA QUERIES---
+ */
 
-/* ===MEDIA DESKTOP=== */
+ /*---TABLET AND ABOVE---*/
 
 @media (min-width: 600px) {
 
@@ -186,7 +234,3 @@ input[type="checkbox"] {
 	}
 
 }
-
-
-
-
