@@ -162,7 +162,8 @@ input[type="text"]:focus,
 input[type=tel]:focus,
 input[type=email]:focus,
 input[type=url]:focus,
-select:focus {
+select:focus,
+textarea:focus {
 	outline-color: #46698b;
 	background-color: #fffb8c
 }
