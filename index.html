@@ -29,7 +29,7 @@
         <div class="form-container">
           <form action="index.html" method="post">
 
-            <fieldset>
+            <fieldset class="contact">
 
               <legend><h2>Contact Information</h2></legend>
               <br>
@@ -94,13 +94,12 @@
 
             <hr>
 
-            <fieldset>
+            <fieldset class="newsletter">
 
               <legend><h2>Newsletter</h2></legend>
               <br>
 
               <label>Select the newsletters you would like to recieve</label>
-              <br>
               <input type="checkbox" id="html" value="html" name="newletter_type"><label for="html" class="inline-label">HTML News</label>
               <br>
               <input type="checkbox" id="css" value="css" name="newletter_type"><label for="css" class="inline-label">CSS News</label>
@@ -109,13 +108,11 @@
               <br>
 
               <label>Newsletter format</label>
-              <br>
               <input type="radio" id="html_format" value="html_format" name="newsletter_format"><label for="html_format" class="inline-label">HTML</label>
               <br>
               <input type="radio" id="plain_format" value="plain_format" name="newsletter_format"><label for="plain_format" class="inline-label">Plain text</label>
 
               <label for="topics">Other topics you'd like to hear about</label>
-              <br>
               <textarea id="topics" name="user_topics"></textarea>
               <br>
 

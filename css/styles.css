@@ -6,7 +6,7 @@
 
 /*---TYPOGRAPHY---*/
 
-h1, h2, h3, h4, p, a, label, button, select, textarea, .placeholder {
+h1, h2, h3, h4, p, a, label, button, select, textarea, input, .placeholder {
 	font-family: 'Merriweather', serif;
 }
 
@@ -52,6 +52,11 @@ hr {
 
 label {
 	display: block;
+}
+
+.newsletter label {
+	margin-top: 1em;
+	margin-bottom: 0.5em;
 }
 
 .inline-label {
@@ -114,34 +119,37 @@ select:focus {
 	background-color: #fffb8c
 }
 
-input:focus:invalid {
+input:required:focus:invalid,
+input[type=url]:focus:invalid {
 	background-color: #ffc3c3;
 }
 
-input:required:valid {
+input:required:focus:valid,
+input[type=url]:focus:valid {
 	background-color: #aeffac;
-}
-
-.placeholder {
-	font-style: italic;
 }
 
 /*Aligning placeholder text for as many browsers as possible*/
 .placeholder::-webkit-input-placeholder {
 	text-align: right;
+	font-style: italic;
 }
 .placeholder:-moz-placeholder {
 	text-align: right;
+	font-style: italic;
 }
 .placeholder::-moz-placeholder {
 	text-align: right;
+	font-style: italic;
 }
 .placeholder:-ms-input-placeholder {
 	text-align: right;
+	font-style: italic;
 }
 
 input[type="radio"],
 input[type="checkbox"] {
+	margin-top: 0;
 	margin-bottom: 1em;
 }
 
@@ -159,6 +167,22 @@ input[type="checkbox"] {
 		max-width: 800px;
 		background-color: #fff;
 		padding: 2.5%;
+	}
+
+	.contact label {
+		display: inline-block;
+		width: 30%;
+		margin-right: -5px;
+		padding-right: 0.5em;
+	}
+
+	.contact input[type="text"],
+	.contact input[type=tel],
+	.contact input[type=email],
+	.contact input[type=url],
+	.contact select {
+		display: inline-block;
+		width: 70%;
 	}
 
 }
