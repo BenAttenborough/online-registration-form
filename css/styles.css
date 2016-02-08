@@ -39,8 +39,14 @@ desktop
  *---TYPOGRAPHY---
  */
 
-h1, h2, h3, h4, p, a, label, button, select, textarea, input, .placeholder {
+h1, h2, h3, h4, p, a, legend, label, button, select, textarea, input, .placeholder {
 	font-family: 'Merriweather', serif;
+}
+
+legend {
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
 }
 
 p, label {
@@ -204,7 +210,7 @@ input[type=url]:focus:valid {
 
  /*---TABLET AND ABOVE---*/
 
-@media (min-width: 600px) {
+@media (min-width: 760px) {
 
 	body {
 		background-image: url("../img/gplaypattern.png");
